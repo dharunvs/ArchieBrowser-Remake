@@ -1,0 +1,71 @@
+<HTML>
+    <HEAD>
+    <TITLE>Search in Archie</TITLE>
+    </HEAD>
+    <BODY BGCOLOR="#ccccdd">
+    <center>
+    <H1>Welcome to archie.icm.edu.pl</H1>
+    </center>
+    <HR>
+    <!-- Please modify the action field in the following line to accomodate your system -->
+    <FORM method="POST" action="http://archie.icm.edu.pl/archie_eng.cgi">
+    <INPUT TYPE=hidden NAME=oflag VALUE="0">
+    <CENTER>
+    <IMG SRC="query.gif" ALT="Archie Query Form"><br>
+    <font size="+2">S</font>earch <font size="+2">f</font>or:<br>
+    <INPUT SIZE=48 NAME="query"><P>
+    </CENTER>
+    <PRE>
+    <blockquote>
+    <b><font size="+1">D</font>atabase:</b>    <INPUT TYPE=radio NAME=database VALUE="Anonymous FTP" CHECKED>Worldwide Anonymous FTP   <INPUT TYPE=radio NAME=database VALUE="Web Index">Polish Web Index
+    <b><font size="+1">S</font>earch Type:</b> <INPUT TYPE=radio NAME=type VALUE="Sub String" CHECKED>Sub String      <INPUT TYPE=radio NAME=type VALUE="Exact">Exact       <INPUT TYPE=radio NAME=type VALUE="Regular Expression">Regular Expression
+    <b><font size="+1">C</font>ase:</b>        <INPUT TYPE=radio NAME=case VALUE="Insensitive" CHECKED>Insensitive     <INPUT TYPE=radio NAME=case VALUE="Sensitive">Sensitive<p>
+    <b><font size="+1">D</font>o you want to look up strings only (no sites returned):</b><br>             <INPUT TYPE=radio NAME=strings VALUE="NO" CHECKED>NO              <INPUT TYPE=radio NAME=strings VALUE="YES">YES<p>
+    <b><font size="+1">O</font>utput Format For Web Index Search:</b> <INPUT TYPE=radio NAME="format" VALUE="Keywords Only" >Keywords Only
+                                        <INPUT TYPE=radio NAME="format" VALUE="Excerpts Only" CHECKED>Excerpts Only
+                                        <INPUT TYPE=radio NAME="format" VALUE="Links Only">Links Only
+    </blockquote>
+    </PRE>
+    <HR>
+    <CENTER> <INPUT TYPE="submit" VALUE=" Search "> <INPUT TYPE="reset" VALUE="Reset"></CENTER>
+    <H3>Optional Search Parameters</H3>
+    <p>
+    You can use as many terms as you like in your query, as long as you 
+    separate them by spaces.
+    By default, <STRONG>Archie</STRONG> inserts "OR" operators between all of 
+    the terms of your query.  If you prefer, you can change the operator to 
+    "AND" by choosing these radio buttons:
+    <P>
+    <INPUT TYPE=radio NAME=pathrel VALUE="OR"> OR
+    <INPUT TYPE=radio NAME=pathrel VALUE="AND"> AND
+    <P>
+    You can also limit the search results to match a directory path (this is 
+    optional):
+    <BR><INPUT TYPE="text" SIZE=48 NAME="path"><P>
+    
+    Or to exclude search results that match a directory path you don't want 
+    (this is also optional):
+    <BR><INPUT TYPE="text" SIZE=48 NAME="expath"><P>
+    
+    If you want to limit the search so that it only looks in certain domains 
+    (such as ca, edu or com), enter one or more in the following boxes:<BR>
+    <INPUT TYPE="text" NAME=domain1 SIZE=5> <INPUT TYPE="text" NAME=domain2 
+    SIZE=5> <INPUT TYPE="text" NAME=domain3 SIZE=5> <INPUT TYPE="text" 
+    NAME=domain4 SIZE=5> <INPUT TYPE="text" NAME=domain5 SIZE=5><P>
+    <!--A HREF="domains.html"To view a list of domains/A--><P>
+    
+    
+    Maximum Hits: <INPUT TYPE="text" SIZE=5 NAME="maxhits" VALUE="100"><P>
+    
+    Maximum hits per string matched (valid for non-exact searches): <INPUT 
+    TYPE="text" SIZE=5 NAME="maxhpm" VALUE="100"><P>
+    
+    Maximum string matched (valid for non-exact searches): <INPUT TYPE="text" 
+    SIZE=5 NAME="maxmatch" VALUE="50">
+    <P>
+    <CENTER>
+    <B><A HREF="archie-adv_pl.html">Wersja polska</A> | <A HREF="archie-help_eng.html">Help</A> | <A HREF="archie_eng.html">Simple Search</A> </B>
+    </CENTER>
+    </FORM>
+    </HTML>
+    

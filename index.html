@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>** Search in Archie</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+    <header>
+        <h1>Welcome to archie.icm.edu.pl</h1>
+        <div class="logo">
+            <h1 class="logo-name">
+                Archie Query Form
+            </h1>
+            <div class="logo-image">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <form method="POST" action="">
+            <div class="search">
+                    
+                    <input name="query" placeholder="Search" type="text">
+            </div>
+
+            <h2>Search Parameters</h2>
+
+            <section class="type">
+                <div class="filters">
+
+                    <div class="page-left">
+                        <div class="container">
+                            <h3>Database</h3>
+                            <div class="field"><input type="radio" name=database value="Anonymous FTP" id="anonymous" checked><label for="anonymous">Worldwide Anonymous FTP</label> </div>
+                            <div class="field"><input type="radio" name=database value="Web Index" id="webindex"><label for="webindex">Polish Web Index</label> </div>
+                        </div>
+                        <div class="container">
+                            <h3>Search Type</h3>
+                            <div class="field"><input type="radio" name="type" value="Sub String" id="substring" checked><label for="substring">Sub string</label></div>
+                            <div class="field"><input type="radio" name="type" value="Exact" id="exact"><label for="exact">Exact</label></div>
+                            <div class="field"><input type="radio" name="type" value="Regular Expression" id="regularexpression"><label for="regularexpression">Regular Expression</label></div>
+                        </div>
+                        <div class="container">
+                            <h3>Case</h3>
+                            <div class="field"><input type="radio" name="case" value="Insensitive" id="insensitive" checked><label for="insensitive">Insensitive</label> </div>
+                            <div class="field"><input type="radio" name="case" value="Sensitive" id="sensitive"><label for="sensitive">Sensitive</label></div>
+                        </div>
+                    </div>
+                    
+                    <div class="page-right">
+                        <div class="container">
+                            <h3>Do you want to look up strings only</h3>
+                            <div class="field"><input type="radio" name="strings" value="No" id="no" checked><label for="no">No</label></div>
+                            <div class="field"><input type="radio" name="strings" value="Yes" id="yes"><label for="yes">Yes</label></div>
+                        </div>
+                        <div class="container">
+                            <h3>Output Format For Web Index Search</h3>
+                            <div class="field"><input type="radio" name="format" value="Keywords Only" id="keywords" checked><label for="keywords">Keywords Only</label> </div>
+                            <div class="field"><input type="radio" name="format" value="Excerpts Only" id="excerpts"><label for="excerpts">Excerpts Only</label> </div>
+                            <div class="field"><input type="radio" name="format" value="Links Only" id="links"><label for="links">Links Only</label> </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+
+            
+            <div class="submit">
+                <input type="submit" value="Search">
+                <input type="reset" value="Reset">
+            </div>
+
+            <h2>Optional Parameters</h2>
+
+            <div class="pathrel">
+                <div class="container">
+                    You can use as many terms as you like in your query, as long as you separate them by spaces. <br><br>
+                    You can use as many terms as you like in your query, as long as you separate them by spaces.
+                    By default, <strong>Archie</strong> inserts "OR" operators between all of the terms of your query.
+                    If you prefer, you can change the operator to "AND" by choosing these radio buttons:
+                    <div class="field"><input type="radio" name="pathrel" value="or" id="or"><label for="or">OR</label></div>
+                    <div class="field"><input type="radio" name="pathrel" value="and" id="and"><label for="and">AND</label></div>
+                </div>
+                
+            </div>
+            <div>
+                <div class="container">
+                    You can also limit the search results to match a directory path (this is optional)
+                    <input type="text" name="path">
+                </div>
+            </div><br>
+            <div>
+                <div class="container">
+                    Or to exclude search results that match a directory path you don't want (this is also optional)
+                    <input type="text" size=48 name="expath">
+                </div>
+            </div><br>
+            <div>
+                <div class="container">
+                    If you want to limit the search so that it only looks in certain domains (such as ca, edu or com), enter one or more in the following boxes<br>
+                    <input type="text" name=domain1 class="domain-input">
+                    <input type="text" name=domain2 class="domain-input">
+                    <input type="text" name=domain3 class="domain-input">
+                    <input type="text" name=domain4 class="domain-input">
+                    <input type="text" name=domain5 class="domain-input">
+                </div>
+            </div><br>
+
+            <div class="container">
+                Maximum Hits
+                <input type="text" name="maxhits" value="100" class="num-inputs">
+            </div>
+
+            <div class="container">
+                Maximum hits per string matched (valid for non-exact searches)
+                <input type="text" name="maxhpm" value="100" class="num-inputs">
+            </div>
+
+            <div class="container">
+                Maximum string matched (valid for non-exact searches)
+                <input type="text" name="maxmatch" value="50" class="num-inputs">
+            </div>     
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <ul>
+                <li><a href="archie-adv_pl.html">Wersja polska</a></li>
+                <li><a href="archie-help_eng.html">Help</a></li>
+                <li><a href="archie_eng.html">Simple Search</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
